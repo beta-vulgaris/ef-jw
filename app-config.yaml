@@ -6,6 +6,9 @@ organization:
   name: My Company
 
 backend:
+  reading:
+    allow:
+      - host: raw.githubusercontent.com
   # Used for enabling authentication, secret is shared by all backend plugins
   # See https://backstage.io/docs/auth/service-to-service-auth for
   # information on the format
@@ -91,6 +94,11 @@ catalog:
   rules:
     - allow: [Component, System, API, Resource, Location]
   locations:
+    # EF service templates
+    - type: file
+      target: ../../ef-services/ef-service-countryinfo-api/template.yaml
+      rules:
+        - allow: [Template]
 
     ## Uncomment these lines to add more example data
     # - type: url
