@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ef-service-countryinfo-api
+  description: Provides various information for a country.
+spec:
+  type: website
+  owner: johann.georg.wolf@gmail.com
+  lifecycle: experimental
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Country info API
